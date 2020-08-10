@@ -41,11 +41,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-4 d-flex align-items-center">
+
+            {{-- INI SEARCH --}}
+            {{-- <div class="col-12 col-sm-4 d-flex align-items-center">
               <div id="analytics-overview-date-range" class="input-daterange input-group input-group-sm ml-auto">
                 <input type="search" class="input-sm form-control" name="end" placeholder="Search" id="analytics-overview-date-range-2">
               </div>
-            </div>
+            </div> --}}
+
           </div>
           <!-- End Page Header -->
        <!-- Transaction History Table -->
