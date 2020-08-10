@@ -12,7 +12,7 @@ class UserKendaraan extends Model
     protected $fillable = ['username','jenis_kendaraan','noRegistrasi','namaPemilik','alamat','merk','seri','model','warna','foto','tahunPembuatan',''];
     public function RefJenisKendaraan1()
     {
-        return $this->hasOne('App\RefJenisKendaraan','id_ref_kendaraan','jenis_kendaraan');
+        return $this->hasOne('App\refbiaya','id_ref_kendaraan','jenis_kendaraan');
     }
     public function RefMerk1()
     {
@@ -37,7 +37,7 @@ class UserKendaraan extends Model
     }
     public function RefJenisKendaraan2()
     {
-        return $this->belongsTo('App\RefJenisKendaraan','jenis_kendaraan','id_ref_kendaraan');
+        return $this->belongsTo('App\refbiaya','jenis_kendaraan','id_ref_kendaraan');
     }
 }
 

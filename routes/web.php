@@ -22,11 +22,11 @@ Route::get("/login", "LoginController@index");
 Route::post("/login", "LoginController@getdata");
 
 // UNTUK PARKIR KELUAR
-Route::get("/parkirkeluar", "ParkirmkeluarController@parkirkeluar");
+// Route::get("/parkirkeluar", "ParkirmkeluarController@parkirkeluar");
 Route::get("/parkirkeluar", "ParkirmkeluarController@index");
 
 // UNTUK PARKIR MASUK
-Route::get("/parkirmasuk", "ParkirmasukController@parkirmasuk");
+// Route::get("/parkirmasuk", "ParkirmasukController@parkirmasuk");
 Route::get("/parkirmasuk", "ParkirmasukController@index");
 
 

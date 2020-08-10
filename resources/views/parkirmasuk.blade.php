@@ -12,19 +12,29 @@
               <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
                 <div class="form-group col-md-6">
                   <label for="displayEmail">Jukir</label>
-                  <select class="custom-select">
+                  <select class="custom-select" id="jukir" onchange="getInfoParkir()">
                     <option value="0" selected>All</option>
                     @foreach ($jukir as $item)
-                      <option value="{{$item->username}}">{{$item->username}}</option>
+                    @if (isset($_GET['jukir']))
+                      <option value="{{$item->username}}" {{ ($_GET['jukir']==$item->username) ? 'selected' : '' }}>{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
+                    @else
+                      <option value="{{$item->username}}" >{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
+                    @endif
+                      
                     @endforeach
                   </select>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="displayEmail">Jenis kendaraan</label>
-                  <select class="custom-select">
+                  <select class="custom-select" id="jenis_kendaraan" onchange="getInfoParkir()">
                     <option value="0" selected>All</option>
                     @foreach ($refbiaya as $i)
-                    <option value="{{$i->jenis_kendaraan}}">{{$i->jenis_kendaraan}}</option>
+                      @if (isset($_GET['jenis_kendaraan']))
+                      <option value="{{$i->id_ref_kendaraan}}" {{ ($_GET['jenis_kendaraan']==$i->id_ref_kendaraan) ? 'selected' : '' }}>{{$i->jenis_kendaraan}}</option>
+                      @else
+                      <option value="{{$i->id_ref_kendaraan}}" >{{$i->jenis_kendaraan}}</option>
+                      @endif
+                      
                     @endforeach
                     
                   </select>
@@ -48,21 +58,45 @@
             function initialize() {
             var propertiPeta = {
                 center:new google.maps.LatLng(-0.501617,117.126472),
-                zoom:9,
+                zoom:15,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
             
             var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
             // membuat Marker
-            @foreach ($tb_parkir as $item)
-              var latitude = {{$item->lat }};
-              var longtitude = {{$item->lng }};
-              var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
-              markers[i] = new google.maps.Marker({
-                position: myLatLng,
-                map : peta
-              });
-              i++;
+            @foreach ($tb_parkir  as $item)
+             @if(isset($_GET['jenis_kendaraan']))
+               @if($_GET['jenis_kendaraan'] == "0")
+                   var latitude = {{$item->lat }};
+                   var longtitude = {{$item->lng }};
+                   var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
+                   markers[i] = new google.maps.Marker({
+                     position: myLatLng,
+                     map : peta
+                   });
+                   i++;
+               @else
+                 @if($item->UserKendaraan->RefJenisKendaraan1->id_ref_kendaraan == $_GET['jenis_kendaraan'])
+                   var latitude = {{$item->lat }};
+                   var longtitude = {{$item->lng }};
+                   var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
+                   markers[i] = new google.maps.Marker({
+                     position: myLatLng,
+                     map : peta
+                   });
+                   i++;
+                 @endif
+               @endif
+             @else
+                   var latitude = {{$item->lat }};
+                   var longtitude = {{$item->lng }};
+                   var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
+                   markers[i] = new google.maps.Marker({
+                     position: myLatLng,
+                     map : peta
+                   });
+                   i++;
+             @endif
             @endforeach
             }
             // event jendela di-load  
@@ -73,4 +107,11 @@
         </body>
             <!-- End Transaction History Table -->
   </div>
+  <script>
+    function getInfoParkir(){
+      var jukir = $("#jukir").val();
+      var jenis_kendaraan = $("#jenis_kendaraan").val();
+      window.location.replace('/parkirmasuk?jukir='+jukir+'&jenis_kendaraan='+jenis_kendaraan);
+    }
+  </script>
 @endsection

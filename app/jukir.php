@@ -12,8 +12,8 @@ class jukir extends Model
         protected $primaryKey = "id";
         public $timestamps = false;
         protected $fillable = ['username','nama','tgl_lahir','no_hp','email','foto'];
-        public function UserAkun()
+        public function UserJukirBiodata()
         {
-            return $this->belongsTo('App\UserAkun','username','username');
+            return $this->hasOne('App\UserJukirBiodata','username','username');
         }
 }
