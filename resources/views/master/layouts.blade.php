@@ -34,13 +34,13 @@
                 <ul class="navbar-nav border-left flex-row border-right ml-auto">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      <img class="user-avatar rounded-circle mr-2" src="{{ asset('images/avatars/0.jpg') }}" alt="User Avatar"> <span class="d-none d-md-inline-block">{{ Session::get('nama') }}</span>
+                      <img class="user-avatar rounded-circle mr-2" src="{{ asset('images/avatars/profil.jpeg') }}" alt="User Avatar"> <span class="d-none d-md-inline-block">{{ Session::get('nama') }}</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-small">
                       <a class="dropdown-item" href="/biodata"><i class="material-icons">account_circle</i> Profile</a>
                       <a class="dropdown-item" href="/edit-biodata"><i class="material-icons">edit</i> Edit Profile</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item text-danger" href="/logout">
+                      <a class="dropdown-item text-danger" href="/login">
                         <i class="material-icons text-danger"></i> Logout </a>
                     </div>
                   </li>
