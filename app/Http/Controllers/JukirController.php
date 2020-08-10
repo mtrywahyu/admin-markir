@@ -2,34 +2,51 @@
 
 namespace App\Http\Controllers;
 
-use App\jukir;
+use App\parkirmasuk;
+use App\refbiaya;
+use App\UserJukir;
 use Illuminate\Http\Request;
 
 class JukirController extends Controller
 {
-    public function jukir()
-    {
-        return view("/jukir");
-    }
 
     //view datajukir
     public function index()
     {
-        $user_jukir_biodata = jukir::all();
+        $jukir = UserJukir::all();
 
-        return view ("jukir",["jukir"=>$user_jukir_biodata]);
+        return view ("jukir",compact('jukir'));
+    }
+    //edit
+    function edit($username){
+        $jukir = UserJukir::all()->where("username",$username)->first();
+        // return $jukir;
+        return view("datavalidasi",compact('jukir'));
+    }
+
+    //save hasil verifikasi
+    function simpan(Request $request){
+        $jukir = UserJukir::where("username",$request->username)->first();
+        $jukir->status = "Y";
+        $jukir->save();
+        return redirect("/jukir");
     }
 
     // hapus sementara
 
-    public function hapus($id)
+    public function hapus($username)
     {
-        $user_jukir_biodata = jukir::find($id);
-
-        $user_jukir_biodata->delete();
-
-
+        $jukir = UserJukir::where("username",$username)->first();
+        $jukir->delete();
         return redirect("/jukir");
+    }
+
+    //lihat mapsnya jukir
+    function showJukir($username){
+        $parkirmasuk   = parkirmasuk::all()->where("stat_parkir","Sudah")->where('jukir',$username);
+        $refbiaya=refbiaya::all();
+        return view("jukirParkir",compact('parkirmasuk','refbiaya','username'));
+        
     }
 
 

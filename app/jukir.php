@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class jukir extends Model
 {
-        use SoftDeletes;
+        use SoftDeletes; 
         protected $table = "user_jukir_biodata";
         protected $primaryKey = "id";
         public $timestamps = false;

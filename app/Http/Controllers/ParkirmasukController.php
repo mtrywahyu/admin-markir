@@ -28,7 +28,7 @@ class ParkirmasukController extends Controller
             }
             
         }
-        // return $tb_parkir->first();
+        // return $tb_parkir->first()->UserKendaraan->UserAkun->UserBiodata;
         $jukir=jukir::all();
         $refbiaya=refbiaya::all();
       // return $jukir;

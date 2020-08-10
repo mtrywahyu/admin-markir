@@ -24,25 +24,48 @@
                       <th scope="col" class="border-0">No</th>
                       <th scope="col" class="border-0">Username</th>
                       <th scope="col" class="border-0">Nama</th>
+                      <th scope="col" class="border-0">No. Hp</th>
+                      <th scope="col" class="border-0">Status</th>
+                      <th scope="col" class="border-0">#</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <?php $i=1; ?>
                     @foreach($jukir as $j)
                         
                     <tr>
-                      <td>{{$j->id}}</td>
+                      <td>{{$i++}}</td>
                       <td>{{$j->username}}</td>
-                      <td>{{$j->nama}}</td>
+                      <td>{{$j->UserJukirBiodata->nama}}</td>
+                      <td>{{$j->UserJukirBiodata->no_hp}}</td>
                       <td>
+                        @if ($j->status == "N")
+                          <button class="btn btn-danger">Belum Terverifikasi</button>
+                        @else
+                        <button class="btn btn-success">Terverifikasi</button>
+                        @endif
+                      </td>
+                      <td>
+                        @if ($j->status == "N")
+                          <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
+                            <a href="/editJukir/{{$j->username}}">
+                            <button type="button" class="btn btn-white">
+                              <i class="material-icons">edit</i>
+                            </button>
+                            </a>
+                          </div>
+                        @else
+                          <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
+                            <a href="/showJukir/{{$j->username}}">
+                            <button type="button" class="btn btn-white">
+                              <i class="material-icons">visibility</i>
+                            </button>
+                            </a>
+                          </div>
+                        @endif
+                        
                         <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
-                          <a href="/jukir/{{$j->id}}">
-                          <button type="button" class="btn btn-white">
-                            <i class="material-icons">edit</i>
-                          </button>
-                          </a>
-                        </div>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
-                          <a href="/jukir/{{$j->id}}">
+                          <a href="/jukir/{{$j->username}}">
                           <button type="button" class="btn btn-white">
                             <i class="material-icons">delete</i>
                           </button>

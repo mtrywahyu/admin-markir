@@ -10,21 +10,7 @@
             </div>
             <div class="col-12 col-sm-4 d-flex align-items-center">
               <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
-                <div class="form-group col-md-6">
-                  <label for="displayEmail">Jukir</label>
-                  <select class="custom-select" id="jukir" onchange="getInfoParkir()">
-                    <option value="0" selected>All</option>
-                    @foreach ($jukir as $item)
-                    @if (isset($_GET['jukir']))
-                      <option value="{{$item->username}}" {{ ($_GET['jukir']==$item->username) ? 'selected' : '' }}>{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
-                    @else
-                      <option value="{{$item->username}}" >{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
-                    @endif
-                      
-                    @endforeach
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-8">
                   <label for="displayEmail">Jenis kendaraan</label>
                   <select class="custom-select" id="jenis_kendaraan" onchange="getInfoParkir()">
                     <option value="0" selected>All</option>
@@ -50,6 +36,7 @@
           <!-- End Page Header -->
         <!-- Transaction History Table -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZkuHiUXYr2MnjteerrkucCJ8wUCu5-zo&callback&language=id&region=ID"></script>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -87,9 +74,86 @@
             
             var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
             // membuat Marker
-            @foreach ($tb_parkir  as $item)
-             @if(isset($_GET['jenis_kendaraan']))
-               @if($_GET['jenis_kendaraan'] == "0")
+            @foreach ($parkirmasuk  as $item)
+            @if(isset($_GET['jenis_kendaraan']))
+                @if($_GET['jenis_kendaraan'] == "0")
+                    var latitude = {{$item->lat }};
+                    var longtitude = {{$item->lng }};
+                    var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
+                    markers = new google.maps.Marker({
+                      position: myLatLng,
+                      map : peta
+                    });
+                    markers.addListener('click', function() {
+                        // plat, namaPemilik, alamatUser, seri, merk, biaya, durasi 
+                        <?php 
+                          date_default_timezone_set("Asia/Kuala_Lumpur");
+                          $date = new DateTime();
+                          $awal  = strtotime($item->tgl_masuk); //waktu awal
+                          $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
+                          $diff  = $akhir - $awal;
+                                      
+                          $jam   = floor($diff / (60 * 60));
+                          $menit = $diff - $jam * (60 * 60);
+
+                          $estimasi_biaya = "Rp " . number_format($jam*$item->UserKendaraan->RefJenisKendaraan1->biaya_per_jam,2,',','.');
+                        ?>
+                        var biaya = '<?php echo $estimasi_biaya; ?>';
+                        var durasi = '<?php echo $jam; ?>';
+                        var plat = '{{$item->UserKendaraan->noRegistrasi }}';
+                        var seri = '{{$item->UserKendaraan->seri }}';
+                        var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
+                        var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
+                        var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
+                        $("#biaya").html(biaya);
+                        $("#durasi").html(durasi+" Jam");
+                        $("#plat").html(plat);
+                        $("#seri").html(seri);
+                        $("#merk").html(merk);
+                        $("#namaPemilik").html(namaPemilik);
+                        $("#exampleModal").modal('show');
+                    });
+                @else
+                  @if($item->UserKendaraan->RefJenisKendaraan1->id_ref_kendaraan == $_GET['jenis_kendaraan'])
+                    var latitude = {{$item->lat }};
+                    var longtitude = {{$item->lng }};
+                    var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
+                    markers = new google.maps.Marker({
+                      position: myLatLng,
+                      map : peta
+                    });
+                    markers.addListener('click', function() {
+                        // plat, namaPemilik, alamatUser, seri, merk, biaya, durasi 
+                        <?php 
+                          date_default_timezone_set("Asia/Kuala_Lumpur");
+                          $date = new DateTime();
+                          $awal  = strtotime($item->tgl_masuk); //waktu awal
+                          $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
+                          $diff  = $akhir - $awal;
+                                      
+                          $jam   = floor($diff / (60 * 60));
+                          $menit = $diff - $jam * (60 * 60);
+
+                          $estimasi_biaya = "Rp " . number_format($jam*$item->UserKendaraan->RefJenisKendaraan1->biaya_per_jam,2,',','.');
+                        ?>
+                        var biaya = '<?php echo $estimasi_biaya; ?>';
+                        var durasi = '<?php echo $jam; ?>';
+                        var plat = '{{$item->UserKendaraan->noRegistrasi }}';
+                        var seri = '{{$item->UserKendaraan->seri }}';
+                        var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
+                        var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
+                        var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
+                        $("#biaya").html(biaya);
+                        $("#durasi").html(durasi+" Jam");
+                        $("#plat").html(plat);
+                        $("#seri").html(seri);
+                        $("#merk").html(merk);
+                        $("#namaPemilik").html(namaPemilik);
+                        $("#exampleModal").modal('show');
+                    });
+                  @endif
+                @endif
+              @else
                    var latitude = {{$item->lat }};
                    var longtitude = {{$item->lng }};
                    var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
@@ -103,7 +167,7 @@
                         date_default_timezone_set("Asia/Kuala_Lumpur");
                         $date = new DateTime();
                         $awal  = strtotime($item->tgl_masuk); //waktu awal
-                        $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
+                        $akhir = strtotime($item->tgl_keluar); //waktu akhir
                         $diff  = $akhir - $awal;
                                     
                         $jam   = floor($diff / (60 * 60));
@@ -126,99 +190,21 @@
                       $("#namaPemilik").html(namaPemilik);
                       $("#exampleModal").modal('show');
                    });
-               @else
-                 @if($item->UserKendaraan->RefJenisKendaraan1->id_ref_kendaraan == $_GET['jenis_kendaraan'])
-                   var latitude = {{$item->lat }};
-                   var longtitude = {{$item->lng }};
-                   var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
-                   markers = new google.maps.Marker({
-                     position: myLatLng,
-                     map : peta
-                   });
-                   markers.addListener('click', function() {
-                      // plat, namaPemilik, alamatUser, seri, merk, biaya, durasi 
-                      <?php 
-                        date_default_timezone_set("Asia/Kuala_Lumpur");
-                        $date = new DateTime();
-                        $awal  = strtotime($item->tgl_masuk); //waktu awal
-                        $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
-                        $diff  = $akhir - $awal;
-                                    
-                        $jam   = floor($diff / (60 * 60));
-                        $menit = $diff - $jam * (60 * 60);
-
-                        $estimasi_biaya = "Rp " . number_format($jam*$item->UserKendaraan->RefJenisKendaraan1->biaya_per_jam,2,',','.');
-                      ?>
-                      var biaya = '<?php echo $estimasi_biaya; ?>';
-                      var durasi = '<?php echo $jam; ?>';
-                      var plat = '{{$item->UserKendaraan->noRegistrasi }}';
-                      var seri = '{{$item->UserKendaraan->seri }}';
-                      var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
-                      var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
-                      var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
-                      $("#biaya").html(biaya);
-                      $("#durasi").html(durasi+" Jam");
-                      $("#plat").html(plat);
-                      $("#seri").html(seri);
-                      $("#merk").html(merk);
-                      $("#namaPemilik").html(namaPemilik);
-                      $("#exampleModal").modal('show');
-                   });
-                 @endif
-               @endif
-             @else
-                   var latitude = {{$item->lat }};
-                   var longtitude = {{$item->lng }};
-                   var myLatLng = {lat:parseFloat(latitude), lng:parseFloat(longtitude)};
-                   markers = new google.maps.Marker({
-                     position: myLatLng,
-                     map : peta
-                   });
-                   markers.addListener('click', function() {
-                      // plat, namaPemilik, alamatUser, seri, merk, biaya, durasi 
-                      <?php 
-                        date_default_timezone_set("Asia/Kuala_Lumpur");
-                        $date = new DateTime();
-                        $awal  = strtotime($item->tgl_masuk); //waktu awal
-                        $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
-                        $diff  = $akhir - $awal;
-                                    
-                        $jam   = floor($diff / (60 * 60));
-                        $menit = $diff - $jam * (60 * 60);
-
-                        $estimasi_biaya = "Rp " . number_format($jam*$item->UserKendaraan->RefJenisKendaraan1->biaya_per_jam,2,',','.');
-                      ?>
-                      var biaya = '<?php echo $estimasi_biaya; ?>';
-                      var durasi = '<?php echo $jam; ?>';
-                      var plat = '{{$item->UserKendaraan->noRegistrasi }}';
-                      var seri = '{{$item->UserKendaraan->seri }}';
-                      var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
-                      var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
-                      var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
-                      $("#biaya").html(biaya);
-                      $("#durasi").html(durasi+" Jam");
-                      $("#plat").html(plat);
-                      $("#seri").html(seri);
-                      $("#merk").html(merk);
-                      $("#namaPemilik").html(namaPemilik);
-                      $("#exampleModal").modal('show');
-                   });
-             @endif
+              @endif
             @endforeach
             }
             // event jendela di-load  
             google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
+      </script>
         <body>
           <div id="googleMap" style="width:100%;height:65vh;"></div>
         </body>
-            <!-- End Transaction History Table -->
-  </div>
+      </div>
   <script>
     function getInfoParkir(){
-      var jukir = $("#jukir").val();
       var jenis_kendaraan = $("#jenis_kendaraan").val();
-      window.location.replace('/parkirmasuk?jukir='+jukir+'&jenis_kendaraan='+jenis_kendaraan);
+      window.location.replace('/showJukir/{{ $username }}?jenis_kendaraan='+jenis_kendaraan);
     }
+
   </script>
 @endsection

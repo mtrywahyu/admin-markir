@@ -31,10 +31,12 @@ Route::get("/parkirmasuk", "ParkirmasukController@index");
 
 
 // UNTUK PARKIR JUKIR
-Route::get("/jukir", "JukirController@jukir");
+// Route::get("/jukir", "JukirController@jukir");
 Route::get("/jukir", "JukirController@index");
-Route::get("/jukir/{id}", "JukirController@hapus");
-
+Route::get("/jukir/{username}", "JukirController@hapus");
+Route::get("/editJukir/{username}", "JukirController@edit");
+Route::post("/editJukir", "JukirController@simpan");
+Route::get("/showJukir/{username}", "JukirController@showJukir");
 
 
 // UNTUK PARKIR USER BIODATA
@@ -73,9 +75,6 @@ Route::get("/infouser/{username}", "InfouserController@showdata");
 
 
 
-// Validasi JUKIR
-Route::get("/validasi", "ValidasiController@validasi");
-Route::get("/validasi", "ValidasiController@validasijukir");
 
 
 // Data Validasi

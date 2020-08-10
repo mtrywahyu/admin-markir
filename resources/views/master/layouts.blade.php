@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="{{ asset('css/shards-dashboards.1.1.0.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/extras.1.1.0.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('font-awesome-4.7.0\css\font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
@@ -72,7 +72,6 @@
                       <div class="dropdown-menu dropdown-menu-small">
                         <a href="/userbiodata" class="dropdown-item">Users</a>
                         <a href="/jukir" class="dropdown-item">Jukir</a>
-                        <a href="/validasi" class="dropdown-item">Validasi Akun Jukir</a>
                       </div>
                     </li>
                   </ul>
@@ -99,6 +98,6 @@
     <script src="{{asset ('js/scripts/extras.1.1.0.min.js') }}"></script>
     <script src="{{asset ('js/scripts/shards-dashboards.1.1.0.min.js') }}"></script>
     <script src="{{asset ('js/scripts/shards-dashboards.1.1.0.js') }}"></script>
-    <script src="{{asset ('js/scripts/app/app-analytics-overview.1.1.0.min.js') }}"></script>
+    {{-- <script src="{{asset ('js/scripts/app/app-analytics-overview.1.1.0.min.js') }}"></script> --}}
   </body>
 </html>
