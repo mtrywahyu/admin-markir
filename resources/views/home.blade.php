@@ -38,7 +38,7 @@
               <a href="/riwayat">
               <img src="{{asset('images/mobil-keluar.png')}} ">
             </a>
-            </div>
+            </div> 
           </div>
           <canvas height="60" class="analytics-overview-stats-small-2"></canvas>
         </div>

@@ -14,7 +14,7 @@ class JukirController extends Controller
     public function index()
     {
         $jukir = UserJukir::all();
-
+        // return $jukir->first()->UserJukirBiodata;
         return view ("jukir",compact('jukir'));
     }
     //edit
@@ -27,6 +27,7 @@ class JukirController extends Controller
     //save hasil verifikasi
     function simpan(Request $request){
         $jukir = UserJukir::where("username",$request->username)->first();
+        // return $jukir;
         $jukir->status = "Y";
         $jukir->save();
         return redirect("/jukir");
