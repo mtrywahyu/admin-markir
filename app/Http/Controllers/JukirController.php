@@ -14,7 +14,7 @@ class JukirController extends Controller
     public function index()
     {
         $jukir = UserJukir::all();
-
+        // return $jukir->first()->UserJukirBiodata;
         return view ("jukir",compact('jukir'));
     }
     //edit

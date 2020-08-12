@@ -9,7 +9,7 @@ class UserJukir extends Model
     use SoftDeletes;
     protected $table = "user_jukir";
     public $timestamps = false;
-    public $primaryKey = 'username';
+    // public $primaryKey = 'username';
     protected $fillable = ['username','password'];
     public function UserJukirBiodata()
     {

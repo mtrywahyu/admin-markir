@@ -11,7 +11,7 @@ class jukir extends Model
         protected $table = "user_jukir_biodata";
         protected $primaryKey = "id";
         public $timestamps = false;
-        protected $fillable = ['username','nama','tgl_lahir','no_hp','email','foto'];
+        protected $fillable = ['username','nama','tgl_lahir','no_hp','email','foto'];      
         public function UserJukirBiodata()
         {
             return $this->hasOne('App\UserJukirBiodata','username','username');
