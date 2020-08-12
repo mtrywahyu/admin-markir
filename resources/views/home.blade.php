@@ -21,7 +21,7 @@
                 <span class="stats-medium__label mb-1 text-uppercase">Parkir Terkini</span>
               </span>
               <a href="/parkirmasuk">
-                <img src="{{asset('images/mobil-masuk.PNG')}} ">
+                <img src="{{asset('images/mobil-masuk.png')}} ">
             </a>
             </div>
           </div>
@@ -36,7 +36,7 @@
             <div class="stats-small__data">
               <span class="stats-small__label mb-1 text-uppercase">Riwayat</span>
               <a href="/riwayat">
-              <img src="{{asset('images/mobil-keluar.PNG')}} ">
+              <img src="{{asset('images/mobil-keluar.png')}} ">
             </a>
             </div>
           </div>
@@ -51,7 +51,7 @@
             <div class="stats-small__data">
               <span class="stats-small__label mb-1 text-uppercase">Jukir</span>
               <a href="/jukir">
-              <img src="{{asset('images/avatar.PNG')}} ">
+              <img src="{{asset('images/avatar.png')}} ">
             </a>
             </div>
           </div>
@@ -66,7 +66,7 @@
             <div class="stats-small__data">
               <span class="stats-small__label mb-1 text-uppercase">User</span>
               <a href="/userbiodata">
-                <img src="{{asset('images/user.PNG')}} ">
+                <img src="{{asset('images/user.png')}} ">
               </a>
             </div>
           </div>

@@ -77,5 +77,5 @@ Route::get("/infouser/{username}", "InfouserController@showdata");
 
 
 
-// Data Validasi
+// Data Validasiawdawd
 Route::get("/datavalidasi", "DatavalidasiController@datavalidasi");
