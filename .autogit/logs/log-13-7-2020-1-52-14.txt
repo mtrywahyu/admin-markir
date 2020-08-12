@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 13 2020 01:52:14 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parkirmasuk.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
