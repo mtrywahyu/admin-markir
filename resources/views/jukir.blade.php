@@ -26,7 +26,7 @@
                       <th scope="col" class="border-0">Nama</th>
                       <th scope="col" class="border-0">No. Hp</th>
                       <th scope="col" class="border-0">Status</th>
-                      <th scope="col" class="border-0">#</th>
+                      <th scope="col" class="border-0">action</th>
                     </tr>
                   </thead>
                   <tbody>
