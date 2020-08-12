@@ -146,7 +146,6 @@
                         $awal  = strtotime($item->tgl_masuk); //waktu awal
                         $akhir = strtotime($date->format('Y-m-d H:i:s')); //waktu akhir
                         $diff  = $akhir - $awal;
-                                    
                         $jam   = floor($diff / (60 * 60));
                         $menit = $diff - $jam * (60 * 60);
 
