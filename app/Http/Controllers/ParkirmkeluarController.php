@@ -6,6 +6,7 @@ use App\jukir;
 use App\parkirkeluar;
 use App\parkirmasuk;
 use App\refbiaya;
+use App\UserJukir;
 use Illuminate\Http\Request;
 
 class ParkirmkeluarController extends Controller
@@ -28,7 +29,7 @@ class ParkirmkeluarController extends Controller
             
         }
         // return $tb_parkir->first();
-        $jukir=jukir::all();
+        $jukir=UserJukir::all();
         $refbiaya=refbiaya::all();
         // return $jukir;
         return view('parkirkeluar',compact('tb_parkir','jukir','refbiaya'));

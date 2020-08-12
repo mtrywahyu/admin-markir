@@ -15,7 +15,7 @@ class JukirController extends Controller
     {
         $jukir = UserJukir::all();
         // return $jukir->first()->UserJukirBiodata;
-        return view ("jukir",compact('jukir'));
+        return view("jukir",compact('jukir'));
     }
     //edit
     function edit($username){

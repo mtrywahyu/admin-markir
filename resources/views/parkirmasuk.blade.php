@@ -16,9 +16,9 @@
                     <option value="0" selected>All</option>
                     @foreach ($jukir as $item)
                     @if (isset($_GET['jukir']))
-                      <option value="{{$item->username}}" {{ ($_GET['jukir']==$item->username) ? 'selected' : '' }}>{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
+                      <option value="{{$item->id}}" {{ ($_GET['jukir']==$item->id) ? 'selected' : '' }}>{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
                     @else
-                      <option value="{{$item->username}}" >{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
+                      <option value="{{$item->id}}" >{{$item->UserJukirBiodata->nama}} ({{ $item->username }})</option>
                     @endif
                       
                     @endforeach

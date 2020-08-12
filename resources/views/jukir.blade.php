@@ -48,7 +48,7 @@
                       <td>
                         @if ($j->status == "N")
                           <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
-                            <a href="/editJukir/{{$j->username}}">
+                            <a href="/editJukir/{{$j->id}}">
                             <button type="button" class="btn btn-white">
                               <i class="material-icons">edit</i>
                             </button>
@@ -56,7 +56,7 @@
                           </div>
                         @else
                           <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
-                            <a href="/showJukir/{{$j->username}}">
+                            <a href="/showJukir/{{$j->id}}">
                             <button type="button" class="btn btn-white">
                               <i class="material-icons">visibility</i>
                             </button>

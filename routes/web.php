@@ -40,7 +40,7 @@ Route::get("/showJukir/{username}", "JukirController@showJukir");
 
 
 // UNTUK PARKIR USER BIODATA
-Route::get("/userbiodata", "UserbiodataController@users");
+// Route::get("/userbiodata", "UserbiodataController@users");
 Route::get("/userbiodata", "UserbiodataController@index");
 
 

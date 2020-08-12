@@ -9,10 +9,10 @@ class UserJukir extends Model
     use SoftDeletes;
     protected $table = "user_jukir";
     public $timestamps = false;
-    public $primaryKey = 'username';
+    public $primaryKey = 'id';
     protected $fillable = ['username','password'];
     public function UserJukirBiodata()
     {
-        return $this->hasOne('App\UserJukirBiodata','username','username');
+        return $this->hasOne('App\UserJukirBiodata','id_jukir','id');
     }
 }

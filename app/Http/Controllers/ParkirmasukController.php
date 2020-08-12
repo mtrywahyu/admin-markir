@@ -7,13 +7,14 @@ use App\parkirmasuk;
 use App\tb_parkir;
 use App\refbiaya;
 use App\refmodel;
+use App\UserJukir;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ParkirmasukController extends Controller
 {
     public function parkirmasuk(){
-      return view ("/parkirmasuk"); 
+      return view ("parkirmasuk"); 
     }
 
     
@@ -29,7 +30,7 @@ class ParkirmasukController extends Controller
             
         }
         // return $tb_parkir->first()->UserKendaraan->UserAkun->UserBiodata;
-        $jukir=jukir::all();
+        $jukir=UserJukir::all();
         $refbiaya=refbiaya::all();
       // return $jukir;
       return view('parkirmasuk',compact('tb_parkir','jukir','refbiaya'));
