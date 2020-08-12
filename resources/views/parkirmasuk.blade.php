@@ -84,7 +84,7 @@
             function initialize() {
             var propertiPeta = {
                 center:new google.maps.LatLng(-0.501617,117.126472),
-                zoom:15,
+                zoom:10,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
             
