@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\info;
+use App\RefMerk;
 use Illuminate\Http\Request;
 
 class InfoController extends Controller
@@ -14,7 +15,7 @@ class InfoController extends Controller
 
     public function index()
     {
-        $ref_merk = info::all();
+        $ref_merk = RefMerk::all();
 
         return view("info",["info"=>$ref_merk]);
     }
@@ -23,7 +24,7 @@ class InfoController extends Controller
     public function hapus($id_merk)
     {
         
-        $ref_merk = info::find($id_merk);
+        $ref_merk = RefMerk::find($id_merk);
         $ref_merk->delete();
 
         return redirect("/info");
@@ -38,7 +39,7 @@ class InfoController extends Controller
             'merk'=>'required'
         ]);
 
-        info::create([
+        RefMerk::create([
             'id_merk' =>$request ->id_merk,
             'merk' =>$request ->merk
         ]);

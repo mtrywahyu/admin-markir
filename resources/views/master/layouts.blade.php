@@ -36,7 +36,7 @@
                     <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                       <img class="user-avatar rounded-circle mr-2" src="{{ asset('images/avatars/profil.jpeg') }}" alt="User Avatar"> <span class="d-none d-md-inline-block">{{ Session::get('nama') }}</span>
                     </a>
-                    
+
                     <div class="dropdown-menu dropdown-menu-small">
                       <a class="dropdown-item" href="/biodata"><i class="material-icons">account_circle</i> Profile</a>
                       <a class="dropdown-item" href="/edit-biodata"><i class="material-icons">edit</i> Edit Profile</a>
@@ -73,6 +73,13 @@
                       <div class="dropdown-menu dropdown-menu-small">
                         <a href="/userbiodata" class="dropdown-item">Users</a>
                         <a href="/jukir" class="dropdown-item">Jukir</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link" data-toggle="dropdown"><i class="material-icons">&#xE2C7;</i>Info Kendaraan</a>
+                      <div class="dropdown-menu dropdown-menu-small">
+                        <a href="/info" class="dropdown-item">Merk Kendaraan</a>
+                        <a href="/refbiaya" class="dropdown-item">Info Biaya Kendaraan</a>
                       </div>
                     </li>
                   </ul>
