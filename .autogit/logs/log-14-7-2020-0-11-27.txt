@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 14 2020 00:11:27 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ParkirmasukController.php
+* app/UserAkun.php
+* app/login.php
+* app/userbiodata.php
+* app/userkendaraan.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
