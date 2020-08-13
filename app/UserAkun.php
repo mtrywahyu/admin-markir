@@ -12,7 +12,7 @@ class UserAkun extends Model
     protected $fillable = ['username','password'];
     public function UserBiodata()
     {
-        return $this->belongsTo('App\UserBiodata','username','username');
+        return $this->belongsTo('App\userbiodata','id','username');
     }
     public function UserKendaraan()
     {

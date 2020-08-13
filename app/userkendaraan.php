@@ -20,7 +20,7 @@ class UserKendaraan extends Model
     }
     public function UserAkun()
     {
-        return $this->hasOne('App\UserAkun','username','username');
+        return $this->hasOne('App\UserAkun','id','username');
     }
     public function RefModelKendaraan1()
     {

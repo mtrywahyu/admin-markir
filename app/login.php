@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class login extends Model
 {
-    protected $table = 'admin';
+    protected $table = 'tb_admin';
 }

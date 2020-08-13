@@ -12,6 +12,6 @@ class UserBiodata extends Model
     protected $fillable = ['username','nama','tgl_lahir','no_hp','email','foto'];
     public function UserAkun()
     {
-        return $this->hasMany('App\UserAkun','username','username');
+        return $this->hasMany('App\UserAkun','username','id');
     }
 }
