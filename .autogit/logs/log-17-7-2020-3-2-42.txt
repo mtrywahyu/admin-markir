@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 17 2020 03:02:42 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/JukirController.php
+
+
+Created files:
+* .autogit/logs/log-17-7-2020-2-32-36.txt
+
+
+Deleted files:
+
+
+Renamed files:
