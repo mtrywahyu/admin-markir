@@ -19,7 +19,7 @@ class JukirController extends Controller
     }
     //edit
     function edit($username){
-        $jukir = UserJukir::all()->where("username",$username)->first();
+        $jukir = UserJukir::all()->where("id",$username)->first();
         // return $jukir;
         return view("datavalidasi",compact('jukir'));
     }
