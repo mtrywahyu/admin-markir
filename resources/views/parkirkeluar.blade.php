@@ -120,7 +120,7 @@
                       var seri = '{{$item->UserKendaraan->seri }}';
                       var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
                       var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
-                      var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
+                      var alamatUser = '{{ $item->UserKendaraan->alamat }}';
                       $("#biaya").html(biaya);
                       $("#durasi").html(durasi+" Jam");
                       $("#plat").html(plat);
@@ -158,7 +158,7 @@
                       var seri = '{{$item->UserKendaraan->seri }}';
                       var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
                       var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
-                      var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
+                      var alamatUser = '{{ $item->UserKendaraan->alamat }}';
                       $("#biaya").html(biaya);
                       $("#durasi").html(durasi+" Jam");
                       $("#plat").html(plat);
@@ -197,7 +197,7 @@
                       var seri = '{{$item->UserKendaraan->seri }}';
                       var merk = '{{$item->UserKendaraan->RefMerk1->merk }}';
                       var namaPemilik = '{{$item->UserKendaraan->namaPemilik }}';
-                      var alamatUser = '{{ $item->UserKendaraan->UserAkun->UserBiodata->alamat }}';
+                      var alamatUser = '{{ $item->UserKendaraan->alamat }}';
                       $("#biaya").html(biaya);
                       $("#durasi").html(durasi+" Jam");
                       $("#plat").html(plat);

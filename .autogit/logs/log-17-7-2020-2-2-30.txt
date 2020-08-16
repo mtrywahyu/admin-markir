@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 17 2020 02:02:30 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ParkirmasukController.php
+* resources/views/parkirmasuk.blade.php
+
+
+Created files:
+* .autogit/logs/log-17-7-2020-1-32-22.txt
+
+
+Deleted files:
+
+
+Renamed files:
