@@ -71,11 +71,23 @@
           <span id="namaPemilik"></span>
           <span id="plat" class="text-muted d-block mb-2"></span>
         </div>
-
-        <span id="seri"></span> <br>
-        <span id="merk"></span> <br>
-        <span id="biaya"></span> <br>
-        <span id="durasi"></span> <br>
+        <label for="feLastName">Seri Kendaraan :
+          <span id="seri"></span>
+        </label>
+         <br>
+         <label for="feLastName">Merk Kendaraan :
+          <span id="merk"></span>
+        </label>
+         <br>
+         <label for="feLastName">Biaya :
+          <span id="biaya"></span>
+        </label>
+         <br>
+         <label for="feLastName">Durasi Lama Parkir:
+          <span id="durasi"></span>
+        </label>
+         <br>
+        
         
       </div>
       <div class="modal-footer">
