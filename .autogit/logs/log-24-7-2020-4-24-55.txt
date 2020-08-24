@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 24 2020 04:24:55 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/login.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-7-2020-3-54-52.txt
+
+
+Deleted files:
+
+
+Renamed files:
