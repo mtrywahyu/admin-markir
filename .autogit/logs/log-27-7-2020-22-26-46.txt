@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 27 2020 22:26:46 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-27-7-2020-21-56-39.txt
+
+
+Deleted files:
+
+
+Renamed files:
