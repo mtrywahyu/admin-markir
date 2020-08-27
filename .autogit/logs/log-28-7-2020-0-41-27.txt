@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 28 2020 00:41:27 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ParkirmasukController.php
+* resources/views/parkirkeluar.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-7-2020-0-11-19.txt
+
+
+Deleted files:
+
+
+Renamed files:

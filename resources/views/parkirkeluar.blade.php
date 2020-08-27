@@ -39,17 +39,10 @@
                     
                   </select>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="displayEmail" type="button">Total Kendaraan Parkir</label>
-                    {{-- @foreach ($refbiaya as $i)
-                      @if (isset($_GET['jenis_kendaraan']))
-                      <option value="{{$i->id_ref_kendaraan}}" {{ ($_GET['jenis_kendaraan']==$i->id_ref_kendaraan) ? 'selected' : '' }}>{{$i->jenis_kendaraan}}</option>
-                      @else
-                      <option value="{{$i->id_ref_kendaraan}}" >{{$i->jenis_kendaraan}}</option>
-                      @endif
-                      
-                    @endforeach
-                     --}}
+                <div class="col-12 col-sm-4 d-flex align-items-center">
+                  <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
+                    <a href="/datakendaraan" class="btn btn-white active"> Total kendaraan yang masuk </a>
+                  </div>
                 </div>
               </div>
             </div>
