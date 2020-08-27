@@ -39,6 +39,18 @@
                     
                   </select>
                 </div>
+                <div class="form-group col-md-6">
+                  <label for="displayEmail" type="button">Total Kendaraan Parkir</label>
+                    {{-- @foreach ($refbiaya as $i)
+                      @if (isset($_GET['jenis_kendaraan']))
+                      <option value="{{$i->id_ref_kendaraan}}" {{ ($_GET['jenis_kendaraan']==$i->id_ref_kendaraan) ? 'selected' : '' }}>{{$i->jenis_kendaraan}}</option>
+                      @else
+                      <option value="{{$i->id_ref_kendaraan}}" >{{$i->jenis_kendaraan}}</option>
+                      @endif
+                      
+                    @endforeach
+                     --}}
+                </div>
               </div>
             </div>
 
@@ -58,22 +70,40 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Info Kendaraan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <span id="plat"></span> <br>
-        <span id="namaPemilik"></span> <br>
-        <span id="seri"></span> <br>
-        <span id="merk"></span> <br>
-        <span id="biaya"></span> <br>
-        <span id="durasi"></span> <br>
+        <div class="card-header border-bottom text-center">
+          <div class="mb-3 mx-auto">
+            <img class="rounded-circle" src="images/avatars/0.jpg" alt="User Avatar" width="110">
+          </div>
+          <span id="namaPemilik"></span>
+          <span id="plat" class="text-muted d-block mb-2"></span>
+        </div>
+        <label for="feLastName">Seri Kendaraan :
+          <span id="seri"></span>
+        </label>
+         <br>
+         <label for="feLastName">Merk Kendaraan :
+          <span id="merk"></span>
+        </label>
+         <br>
+         <label for="feLastName">Biaya :
+          <span id="biaya"></span>
+        </label>
+         <br>
+         <label for="feLastName">Durasi Lama Parkir:
+          <span id="durasi"></span>
+        </label>
+         <br>
+        
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
       </div>
     </div>
   </div>
