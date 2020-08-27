@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 28 2020 03:32:34 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/DataKendaraanController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-28-7-2020-1-11-34.txt
+
+
+Deleted files:
+
+
+Renamed files:
