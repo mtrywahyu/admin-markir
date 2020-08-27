@@ -78,4 +78,4 @@ Route::get("/infouser/{username}", "InfouserController@showdata");
 Route::get("/datavalidasi", "DatavalidasiController@datavalidasi");
 
 // Data Kendaraan
-Route::get("/datakendraan", "DataKendaraanController@datakendaraan");
+Route::get("/datakendaraan", "DatakendaraanController@datakendaraan");

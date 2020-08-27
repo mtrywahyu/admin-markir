@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 28 2020 01:11:34 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parkirkeluar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-28-7-2020-0-41-27.txt
+* app/Http/Controllers/DataKendaraanController.php
+* resources/views/datakendaraan.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
