@@ -21,7 +21,7 @@
           <thead class="bg-light">
             <tr>
               <th scope="col" class="border-0">No</th>
-              <th scope="col" class="border-0">Model Kendaraan</th>
+              <th scope="col" class="border-0">KT Kendaraan</th>
               <th scope="col" class="border-0">Juru Parkir</th>
               <th scope="col" class="border-0">Status pakir</th>
               <th scope="col" class="border-0">Biaya</th>
@@ -32,7 +32,7 @@
             @foreach($datakendaraan as $d)
                 
             <tr>
-              <td>{{$d->id_parkir}}</td>
+              <td>{{$d->UserKendaraan}}</td>
               <td>{{$d->id_kendaraan}}</td>
               <td>{{$d->jukir}}</td>
               <td>{{$d->stat_parkir}}</td>

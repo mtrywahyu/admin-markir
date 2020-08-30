@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 04:24:38 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/datakendaraan.blade.php
+* resources/views/jukir.blade.php
+* resources/views/parkirkeluar.blade.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-3-54-6.txt
+
+
+Deleted files:
+
+
+Renamed files:
