@@ -39,11 +39,6 @@
                     
                   </select>
                 </div>
-                <div class="col-12 col-sm-4 d-flex align-items-center">
-                  <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
-                    <a href="/datakendaraan" class="btn btn-white active"> Total kendaraan yang masuk </a>
-                  </div>
-                </div>
               </div>
             </div>
 

@@ -6,7 +6,7 @@
       <div class="col-12 col-sm-6 text-center text-sm-left mb-4 mb-sm-0">
         <span class="text-uppercase page-subtitle">Informasi
         </span>
-        <h3 class="page-title">Info Merk Kendaraan</h3>
+        <h3 class="page-title">Insentif Setiap jukir</h3>
       </div>
     </div>
     <!-- End Page Header -->
