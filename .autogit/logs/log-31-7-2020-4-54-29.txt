@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 04:54:29 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/DataKendaraanController.php
+* resources/views/datakendaraan.blade.php
+* resources/views/jukir.blade.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-4-24-38.txt
+
+
+Deleted files:
+
+
+Renamed files:
