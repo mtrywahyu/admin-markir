@@ -36,7 +36,7 @@
           <div class="d-flex px-3">
             <div class="stats-small__data">
               <span class="stats-small__label mb-1 text-uppercase">Riwayat</span>
-              <a href="/riwayat">
+              <a href="/parkirkeluar">
               <img src="{{asset('images/mobil-keluar.png')}} ">
               <p>Total:{{$riwayat}}</p>
             </a>
@@ -70,7 +70,7 @@
               <span class="stats-small__label mb-1 text-uppercase">User</span>
               <a href="/userbiodata">
                 <img src="{{asset('images/user.png')}} ">
-              <p>Total:{{}}</p>
+              <p>Total:{{$user_akun}}</p>
               </a>
             </div>
           </div>
