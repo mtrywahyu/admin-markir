@@ -22,6 +22,7 @@
               </span>
               <a href="/parkirmasuk">
                 <img src="{{asset('images/mobil-masuk.png')}} ">
+              <p>Total:{{$terkini}}</p>
             </a>
             </div>
           </div>
@@ -37,6 +38,7 @@
               <span class="stats-small__label mb-1 text-uppercase">Riwayat</span>
               <a href="/riwayat">
               <img src="{{asset('images/mobil-keluar.png')}} ">
+              <p>Total:{{$riwayat}}</p>
             </a>
             </div> 
           </div>
@@ -51,8 +53,9 @@
             <div class="stats-small__data">
               <span class="stats-small__label mb-1 text-uppercase">Jukir</span>
               <a href="/jukir">
-              <img src="{{asset('images/avatar.png')}} ">
-            </a>
+                <img src="{{asset('images/avatar.png')}} ">
+                <p>Total:{{$jukir}}</p>
+              </a>
             </div>
           </div>
           <canvas height="60" class="analytics-overview-stats-small-3"></canvas>
@@ -67,6 +70,7 @@
               <span class="stats-small__label mb-1 text-uppercase">User</span>
               <a href="/userbiodata">
                 <img src="{{asset('images/user.png')}} ">
+              <p>Total:{{}}</p>
               </a>
             </div>
           </div>
