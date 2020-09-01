@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 01 2020 23:50:06 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-8-2020-23-20-0.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -65,7 +65,7 @@ Route::get("/ref_model/hapus/{id_model}", "RefmodelController@hapus");
 route::post("/refmodel","RefmodelController@store");
 
 // UNTUK PARKIR RIWAYAT
-Route::get("/riwayat", "RiwayatController@index");
+// Route::get("/riwayat", "RiwayatController@index");
 
 
 // UNTUK PARKIR INFO USER
