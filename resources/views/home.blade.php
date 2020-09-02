@@ -125,7 +125,7 @@
   var chart = new Chart(ctx, {
       // The type of chart we want to create
       type: 'bar',
-  
+    
       // The data for our dataset
       data: {
           labels: ['Motor', 'Mobil', 'Bis', 'Truck'],
