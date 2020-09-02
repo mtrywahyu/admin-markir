@@ -16,10 +16,12 @@ class HomeController extends Controller
         $riwayat = parkirmasuk::all()->count();
         $user_akun = UserAkun::all()->count();
         $ref_jenis_kendaraan = refbiaya::all();
+        $a=array();
             foreach($ref_jenis_kendaraan as $item){
-                
+                array_push($a,$item->jenis_kendaraan);
             }
-        // return $ref_jenis_kendaraan;
-    // return view("home",compact('jukir','terkini','riwayat','user_akun'));
+        $a =  implode('', $a);
+        return $a;
+    return view("home",compact('jukir','terkini','riwayat','user_akun','a'));
     }
 }
