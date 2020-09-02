@@ -80,4 +80,43 @@
     </div>
   </div>
   <!-- End Small Stats Blocks -->
+  <div class="row">
+    <div class="col col-lg-8 col-md-12 col-sm-12 mb-4">
+      <div class="card card-small h-100">
+        <div class="card-header border-bottom">
+          <h6 class="m-0">Sessions</h6>
+          <div class="block-handle"></div>
+        </div>
+        <div class="card-body pt-0">
+          <div class="row border-bottom py-2 bg-light">
+            <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
+              <div class="btn-group btn-group-sm btn-group-toggle d-flex my-auto mx-auto mx-sm-0" data-toggle="buttons">
+                <label class="btn btn-white active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Hour </label>
+                <label class="btn btn-white">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Day </label>
+                <label class="btn btn-white">
+                  <input type="radio" name="options" id="option3" autocomplete="off"> Week </label>
+                <label class="btn btn-white">
+                  <input type="radio" name="options" id="option4" autocomplete="off"> Month </label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div id="sessions-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="analytics-overview-sessions-date-range-1">
+                <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="analytics-overview-sessions-date-range-2">
+                <span class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="material-icons"></i>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="analytics-overview-sessions-legend"></div>
+          <canvas height="120" style="max-width: 100% !important;" class="analytics-overview-sessions"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
