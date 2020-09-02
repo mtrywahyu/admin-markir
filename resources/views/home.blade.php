@@ -114,10 +114,33 @@
             </div>
           </div>
           <div id="analytics-overview-sessions-legend"></div>
-          <canvas height="120" style="max-width: 100% !important;" class="analytics-overview-sessions"></canvas>
+          <canvas id="myChart"></canvas>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  </div><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+  
+      // The data for our dataset
+      data: {
+          labels: ['Motor', 'Mobil', 'Bis', 'Truck'],
+          datasets: [{
+              label: 'My First dataset',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [0, 10, 5, 2, 20, 30, 45]
+          }]
+      },
+  
+      // Configuration options go here
+      options: {}
+  });
+  </script>
+  
+  
 @endsection
