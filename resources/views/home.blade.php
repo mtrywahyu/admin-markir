@@ -120,15 +120,15 @@
     </div>
   </div><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-  <script>
+<script>
     var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
+    var chart = new Chart(ctx, {
       // The type of chart we want to create
       type: 'bar',
     
       // The data for our dataset
       data: {
-          labels:[ {{$a}} ],
+          labels:[  ],
           datasets: [{
               label: 'My First dataset',
               backgroundColor: 'rgb(255, 99, 132)',
@@ -140,7 +140,8 @@
       // Configuration options go here
       options: {}
   });
-  </script>
+ </script>
+ 
   
   
 @endsection
