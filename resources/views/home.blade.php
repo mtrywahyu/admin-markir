@@ -111,7 +111,9 @@
         <div class="block-handle"></div>
       </div>
       <div class="card-body d-flex flex-column">
-        <canvas id="my"></canvas>
+        <canvas id="myChart2" width="100" class="analytics-users-by-device mt-3 mb-4"></canvas>
+        <div class="ubd-stats__legend w-75 m-auto pb-4">
+        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -154,46 +156,30 @@
  </script>
  {{-- END chart Parkir Terkini --}}
 
- <canvas id="myChart2"width="400" height="400"></canvas>
 <script>
-var ctx = document.getElementById('myChart2').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
+ var ctx = document.getElementById('myChart2').getContext('2d');
+ var chart = new Chart(ctx, {
+     // The type of chart we want to create
+     type: 'doughnut',
+ 
+     // The data for our dataset
+     data: {
+         labels: ['Ter-Verifikasi', 'Belum Ter-Verifikasi'],
+         datasets: [{
+             label: 'Data Juru Parkir',
+             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-</script>
-  
+             
+             borderColor: 'rgb(255, 99, 132)',
+             data: [0, 10, 5, 2, 20, 30, 45]
+         }]
+     },
+ 
+     // Configuration options go here
+     options: {}
+ })
+</script>  
   
 @endsection
