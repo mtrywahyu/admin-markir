@@ -21,7 +21,7 @@ class HomeController extends Controller
                 array_push($a,$item->jenis_kendaraan);
             }
         $a =  implode(',', $a);
-        return $a
+        // return $a;
     return view("home",compact('jukir','terkini','riwayat','user_akun','a'));
     }
 }
