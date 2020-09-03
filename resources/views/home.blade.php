@@ -92,24 +92,7 @@
             <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
               <div class="btn-group btn-group-sm btn-group-toggle d-flex my-auto mx-auto mx-sm-0" data-toggle="buttons">
                 <label class="btn btn-white active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Hour </label>
-                <label class="btn btn-white">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> Day </label>
-                <label class="btn btn-white">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> Week </label>
-                <label class="btn btn-white">
-                  <input type="radio" name="options" id="option4" autocomplete="off"> Month </label>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div id="sessions-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="analytics-overview-sessions-date-range-1">
-                <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="analytics-overview-sessions-date-range-2">
-                <span class="input-group-append">
-                  <span class="input-group-text">
-                    <i class="material-icons"></i>
-                  </span>
-                </span>
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Data Per-Hari </label>
               </div>
             </div>
           </div>
@@ -121,6 +104,15 @@
   </div><script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 <script>
+  var label = [];
+  @foreach($a as $item)
+    label.push('<?php echo $item; ?>');
+  @endforeach
+  var total = [];
+  @foreach($b as $item)
+    total.push('<?php echo $item; ?>');
+  @endforeach
+  
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
       // The type of chart we want to create
@@ -128,12 +120,12 @@
     
       // The data for our dataset
       data: {
-          labels:['motor','mobil','bis','truck'],
+          labels: label,
           datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: [0, 10, 5, 2, 20, 30, 45]
+              label: 'Data Parkir Terkini ',
+              backgroundColor: 'rgb(28, 173, 186)',
+              borderColor: 'rgb(28, 173, 186)',
+              data: total
           }]
       },
   
