@@ -128,7 +128,7 @@
     
       // The data for our dataset
       data: {
-          labels:[  ],
+          labels:['motor','mobil','bis','truck'],
           datasets: [{
               label: 'My First dataset',
               backgroundColor: 'rgb(255, 99, 132)',
