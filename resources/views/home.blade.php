@@ -167,13 +167,19 @@
          labels: ['Ter-Verifikasi', 'Belum Ter-Verifikasi'],
          datasets: [{
              label: 'Data Juru Parkir',
+             data: [5, 10 ],
              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
             ],
              
-             borderColor: 'rgb(255, 99, 132)',
-             data: [0, 10, 5, 2, 20, 30, 45]
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)'
+                
+                
+            ]
+             
          }]
      },
  
