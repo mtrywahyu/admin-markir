@@ -129,7 +129,10 @@ h6, .h6 {
   line-height: 1; }
 
 p {
-  margin-bottom: 1.75rem; }
+  margin-bottom: 1.75rem;
+  padding-right: 20%;
+  
+}
 
 hr {
   margin-top: 1.125rem;
@@ -4398,6 +4401,9 @@ a.text-accent:hover, a.text-accent:focus {
     flex-flow: column;
     max-width: 50%;
     z-index: 1; }
+    .p{
+      padding-right: 20%;
+    }
   .stats-small__label {
     font-size: 0.625rem;
     letter-spacing: 0.0625rem;

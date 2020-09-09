@@ -12,6 +12,7 @@ class HomeController extends Controller
 {
     public function home(){
         $jukir = jukir::all()->count();
+        $jukir1 = jukir::all();
         $terkini = parkirmasuk::where('stat_parkir','Parkir')->get()->count();
         $riwayat = parkirmasuk::all()->count();
         $user_akun = UserAkun::all()->count();
@@ -32,16 +33,16 @@ class HomeController extends Controller
             array_push($b, $i);
         }
 
-        // foreach($jukir as $item){
-        //     array_push($c,$item->jukir );
-        //     $i = 0;
-        //     foreach($userjukirbiodata as $items){
-        //         if($items->UserKendaraan->RefJenisKendaraan2->id_ref_kendaraan == $item->id_ref_kendaraan){
-        //             $i++;
-        //         }
-        //     }
-        //     array_push($b, $i);
-        // }
+        foreach($jukir as $item){
+            array_push($c,$item->jukir );
+            $i = 0;
+            foreach($userjukirbiodata as $items){
+                if($items->UserKendaraan->RefJenisKendaraan2->id_ref_kendaraan == $item->id_ref_kendaraan){
+                    $i++;
+                }
+            }
+            array_push($b, $i);
+        }
 
         // return $b;
         // return $a;
