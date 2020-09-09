@@ -115,6 +115,16 @@
         <div class="ubd-stats__legend w-75 m-auto pb-4">
         </div>
       </div>
+      <div class="card-footer border-top">
+        <div class="row">
+          <div class="col">
+            <p>Silahkan Cek Data Juru Parkir Sebelum Memverifikasi Juru Parkir</p>
+          </div>
+          <div class="col text-right view-report">
+            <a href="/jukir">View full report &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- end Chart Pie Jukir -->
@@ -130,6 +140,7 @@
   @foreach($b as $item)
     total.push('<?php echo $item; ?>');
   @endforeach
+
   
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
@@ -167,7 +178,7 @@
          labels: ['Ter-Verifikasi', 'Belum Ter-Verifikasi'],
          datasets: [{
              label: 'Data Juru Parkir',
-             data: [5, 10 ],
+             data: [{{$jukir2}}, {{$jukir1}} ],
              backgroundColor: [
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 99, 132, 0.2)'

@@ -10,7 +10,7 @@ class UserJukir extends Model
     protected $table = "user_jukir";
     public $timestamps = false;
     public $primaryKey = 'id';
-    protected $fillable = ['username','password'];
+    protected $fillable = ['username','password','status'];
     public function UserJukirBiodata()
     {
         return $this->hasOne('App\UserJukirBiodata','id_jukir','id');
