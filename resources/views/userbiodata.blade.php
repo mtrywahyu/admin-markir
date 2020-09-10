@@ -24,6 +24,7 @@
                       <th scope="col" class="border-0">No</th>
                       <th scope="col" class="border-0">Username</th>
                       <th scope="col" class="border-0">Nama</th>
+                      <th scope="col" class="border-0">Status</th>
                       <th scope="col" class="border-0">Detail user</th>
                       <th scope="col" class="border-0">Kendaraan</th>
                     </tr>
@@ -35,6 +36,7 @@
                       <td>{{$u->id_kendaraan}}</td>
                       <td>{{$u->username}}</td>
                       <td>{{$u->nama}}</td>
+                      <td></td>
                       <td>
                             <div class="container">
                               <!-- Button to Open the Modal -->

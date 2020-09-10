@@ -30,6 +30,7 @@
                       <th scope="col" class="border-0">Username</th>
                       <th scope="col" class="border-0">Nama</th>
                       <th scope="col" class="border-0">No. Hp</th>
+                      <th scope="col" class="border-0">No Seri Alat</th>
                       <th scope="col" class="border-0">Status</th>
                       <th scope="col" class="border-0">action</th>
                     </tr>
@@ -43,6 +44,7 @@
                       <td>{{$j->username}}</td>
                       <td>{{$j->UserJukirBiodata->nama}}</td>
                       <td>{{$j->UserJukirBiodata->no_hp}}</td>
+                      <td>{{$j->no_seri_alat}}</td>
                       <td>
                         @if ($j->status == "N")
                           <button class="btn btn-danger">Belum Terverifikasi</button>

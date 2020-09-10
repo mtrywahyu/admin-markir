@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 11 2020 00:22:19 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/JukirController.php
+* app/UserJukir.php
+* resources/views/datavalidasi.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-8-2020-23-52-9.txt
+
+
+Deleted files:
+
+
+Renamed files:

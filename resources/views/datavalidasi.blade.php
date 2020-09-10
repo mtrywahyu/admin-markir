@@ -64,7 +64,7 @@
                             <i class="material-icons">&#xE0BE;</i>
                           </div>
                         </div>
-                        <input type="text" class="form-control" id="text" value="{{ $jukir->UserJukirBiodata->email }}" readonly>
+                        <input type="text" class="form-control" id="text" value="{{ $jukir->no_seri_alat }}" readonly>
                       </div>
                     </div>
                     
