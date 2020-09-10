@@ -26,7 +26,6 @@
                       <th scope="col" class="border-0">Nama</th>
                       <th scope="col" class="border-0">Status</th>
                       <th scope="col" class="border-0">Detail user</th>
-                      <th scope="col" class="border-0">Kendaraan</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,7 +35,33 @@
                       <td>{{$u->id_kendaraan}}</td>
                       <td>{{$u->username}}</td>
                       <td>{{$u->nama}}</td>
-                      <td></td>
+                    <td>
+                      @if ($u->status == "N")
+                        <button class="btn btn-danger">Belum Terverifikasi</button>
+                      @else
+                        <button class="btn btn-success">Terverifikasi</button>
+                     @endif
+
+
+                     {{-- @if ($u->status == "N")
+                     <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
+                       <a href="/editJukir/{{$j->id}}">
+                       <button type="button" class="btn btn-white">
+                         <i class="material-icons">edit</i>
+                       </button>
+                       </a>
+                     </div>
+                   @else
+                     <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
+                       <a href="/showJukir/{{$j->id}}">
+                       <button type="button" class="btn btn-white">
+                         <i class="material-icons">visibility</i>
+                       </button>
+                       </a>
+                     </div>
+                   @endif
+                    --}}
+                  </td>
                       <td>
                             <div class="container">
                               <!-- Button to Open the Modal -->
@@ -66,9 +91,17 @@
                                                 <div class="mb-3 mx-auto">
                                                   <img class="rounded-circle" src="images/avatars/0.jpg" alt="User Avatar" width="110">
                                                 </div>
-                                                <h4 class="mb-0" id="nama1"></h4>
                                               </div>
-                                              <ul class="list-group list-group-flush">
+                                              <p class="text-center text-light m-0 mb-2">Lihat Kendaraan User</p>
+                                              <ul class="user-details__social user-details__social--primary d-table mx-4 mb-2">
+                                                <li class="mx-4">
+                                                    <a href="/infouser/{{$u->username}}">
+                                                      <button type="button" class="btn btn-white">
+                                                        Lihat Kendaraan
+                                                      </button>
+                                                   </a>
+                                                </li>
+                                              </ul>
                                             
                                               </ul>
                                             </div>
@@ -128,15 +161,6 @@
                                 </div>
                               </div>
                             </div>
-                      </td>
-                      <td>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
-                        <a href="/infouser/{{$u->username}}">
-                          <button type="button" class="btn btn-white">
-                            <i class="material-icons">moped</i>
-                          </button>
-                        </a>
-                        </div>
                       </td>
                     </tr>
                     @endforeach
