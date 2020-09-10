@@ -55,6 +55,18 @@
                         <input type="email" class="form-control" id="email" value="{{ $jukir->UserJukirBiodata->email }}" readonly>
                       </div>
                     </div>
+
+                    <div class="form-group col-md-6">
+                      <label for="emailAddress">Nomor Alat</label>
+                      <div class="input-group input-group-seamless">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i class="material-icons">&#xE0BE;</i>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" id="text" value="{{ $jukir->UserJukirBiodata->email }}" readonly>
+                      </div>
+                    </div>
                     
                   </div>
                 </div>
