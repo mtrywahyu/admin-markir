@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Sep 10 2020 03:56:52 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/HomeController.php
+* app/UserJukir.php
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-8-2020-3-26-44.txt
+
+
+Deleted files:
+
+
+Renamed files:
