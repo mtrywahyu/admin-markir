@@ -34,7 +34,8 @@
                 <div class="card">
                   <div class="card-body">
                     <img class="auth-form__logo d-table mx-auto mb-3" src="images/shards-dashboards-logo.svg" alt="Shards Dashboards - Register Template">
-                    <h5 class="auth-form__title text-center mb-4">MARKIR</h5>
+                    <h2 class="auth-form__title text-center mb-4">MARKIR</h2>
+                    <h6 class="text-center mb-4 mg-4">Silahkan input akun anda dengan benar </h6>
                     <form method="POST" action="/login">
                       {{-- ini sangat mudah asuuuu  ITU DILEMPAR DULU DALAM LOGIN UNTK DI CEK, baru ke home hmm/ really ntar kukasih tutorlnya--}}
                         {{ csrf_field() }}

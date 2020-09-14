@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 14 2020 17:46:49 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/DatauserController.php
+* app/Http/Controllers/DatavalidasiController.php
+* resources/views/datauser.blade.php
+* resources/views/login.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-11-8-2020-1-22-30.txt
+
+
+Deleted files:
+
+
+Renamed files:
