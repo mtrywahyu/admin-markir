@@ -13,7 +13,6 @@ class DatavalidasiController extends Controller
 
     public function index(){
         $user_biodata_jukir = jukir::all();
-
         return view("jukir",["jukir"=>$user_biodata_jukir]);
     }
 }

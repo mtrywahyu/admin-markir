@@ -43,6 +43,10 @@ Route::get("/showJukir/{username}", "JukirController@showJukir");
 // Route::get("/userbiodata", "UserbiodataController@users");
 Route::get("/userbiodata", "UserbiodataController@index");
 
+// UNTUK DATA VALIDASI USER
+Route::get("/datauser", "DatauserController@index");
+Route::get("/datauser", "DatauserController@datauser");
+
 
 
 // UNTUK PARKIR REF BIAYA
