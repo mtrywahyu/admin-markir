@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\parkirmasuk;
 use App\refbiaya;
 use App\UserJukir;
+use App\UserJukirBiodata;
 use Illuminate\Http\Request;
 
 class JukirController extends Controller
@@ -37,8 +38,10 @@ class JukirController extends Controller
 
     public function hapus($username)
     {
-        $jukir = UserJukir::where("username",$username)->first();
-        $jukir->delete();
+        $jukir = UserJukir::where("id",$username)->first();
+        // return $jukir;
+        $jukir->status = "non";
+        $jukir->save();
         return redirect("/jukir");
     }
 
@@ -49,6 +52,21 @@ class JukirController extends Controller
         return view("jukirParkir",compact('parkirmasuk','refbiaya','username'));
         
     }
+    function getInfoJukir($id){
+        $jukir = UserJukir::find($id);
+        $data = array(
+            'UserJukir'  => UserJukir::find($id),
+            'UserJukirBiodata' => UserJukirBiodata::all()->where("id_jukir",$jukir->id)->first(),
+        );
+        return $data;
+    }
+    function setStatus($id, $status){
+        $jukir = UserJukir::find($id);
+        $jukir->status = $status;
+        $jukir->save();
+        return redirect('/jukir');
+    }
+
 
 
 

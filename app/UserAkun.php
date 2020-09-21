@@ -18,6 +18,6 @@ class UserAkun extends Model
     }
     public function UserKendaraan()
     {
-        return $this->belongsTo('App\UserKendaraan','username','username');
+        return $this->belongsTo('App\UserKendaraan','id','username');
     }
 }

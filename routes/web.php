@@ -33,10 +33,12 @@ Route::get("/parkirmasuk", "ParkirmasukController@index");
 // UNTUK PARKIR JUKIR
 // Route::get("/jukir", "JukirController@jukir");
 Route::get("/jukir", "JukirController@index");
-Route::get("/jukir/{username}", "JukirController@hapus");
+Route::get("/deleteJukir/{username}", "JukirController@hapus");
 Route::get("/editJukir/{username}", "JukirController@edit");
 Route::post("/editJukir", "JukirController@simpan");
 Route::get("/showJukir/{username}", "JukirController@showJukir");
+Route::get("/getInfoJukir/{id}","JukirController@getInfoJukir");
+Route::get("/userJukir/verifikasi/{id}/{status}","JukirController@setStatus");
 
 
 // UNTUK MENAMPILAN DATA USER

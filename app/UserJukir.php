@@ -13,6 +13,6 @@ class UserJukir extends Model
     protected $fillable = ['username','password','status','no_seri_alat'];
     public function UserJukirBiodata()
     {
-        return $this->hasOne('App\UserJukirBiodata','id_jukir','id');
+        return $this->belongsTo('App\UserJukirBiodata','id','id_jukir');
     }
 }
