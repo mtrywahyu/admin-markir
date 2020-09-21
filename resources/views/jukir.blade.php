@@ -8,11 +8,11 @@
               <div class="col-12 col-sm-4 text-center text-sm-left mb-4 mb-sm-0">
                 <h3 class="page-title">Data Jukir</h3>
               </div>
-              <div class="col-12 col-sm-7 d-flex align-items-center">
+              {{-- <div class="col-12 col-sm-7 d-flex align-items-center">
                 <div class="d-inline-flex mb-sm-0 mx-auto ml-sm-auto mr-sm-0" role="group" aria-label="Page actions">
                   <a href="/datakendaraan" class="btn btn-white active"> Insentif Setiap Juru Parkir</a>
                 </div>
-              </div>
+              </div> --}}
             </div>
             <!-- End Page Header -->
         <!-- Transaction History Table -->
