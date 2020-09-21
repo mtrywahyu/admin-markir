@@ -18,7 +18,7 @@ class InfouserController extends Controller
     public function index()
     {
         $user_kendaraan = UserKendaraan::first();
-
+        
         // return $user_biodata;
 
         return view('infouser',['infouser'=>$user_kendaraan]);
@@ -27,12 +27,13 @@ class InfouserController extends Controller
     public function showdata($username)
     {
         $parkirmasuk = parkirmasuk::all()->where("stat_parkir","Sudah");
-        // $user_kendaraan = ::all()->where('username',$username);
+        $user_kendaraan = UserKendaraan::all()->where('username',$username);
         // return $parkirmasuk;
         $refbiaya=refbiaya::all();
         // return $refbiaya;
         // return $parkirmasuk;
-        return view('infouser',compact('parkirmasuk','refbiaya','username'));
+        // return $parkirmasuk;
+        return view('infouser',compact('parkirmasuk','refbiaya','username','user_kendaraan'));
     }
 
     

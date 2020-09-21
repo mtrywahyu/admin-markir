@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("/home");
 });
 
 
@@ -39,15 +39,19 @@ Route::post("/editJukir", "JukirController@simpan");
 Route::get("/showJukir/{username}", "JukirController@showJukir");
 
 
-// UNTUK PARKIR USER BIODATA
-// Route::get("/userbiodata", "UserbiodataController@users");
+// UNTUK MENAMPILAN DATA USER
 Route::get("/userbiodata", "UserbiodataController@index");
 
-// UNTUK DATA VALIDASI USER
-Route::get("/datauser", "DatauserController@index");
-Route::get("/datauser", "DatauserController@datauser");
+// UNTUK DATA VALIDASI USER 
+// Route::get("/datauser", "DatauserController@index");
+// Route::get("/datauser", "DatauserController@datauser");
+Route::get('userbiodata/verifikasi/{id}/{status}','UserbiodataController@verifikasi');
 
+//UNTUK VALIDASI KENDARAAN USER
+Route::get("/infokendaraan/verifikasi/{id}/{status}",'UserBiodataController@verifikasiKendaraan');
 
+//UNTUK MENAMPILKAN KENDARAAN PER USER
+Route::get("/infokendaraan/{username}",'UserBiodataController@kendaraan');
 
 // UNTUK PARKIR REF BIAYA
 Route::get("/refbiaya", "RefbiayaController@index");
@@ -55,7 +59,7 @@ Route::get("/refbiaya/hapus/{id_ref_kendaraan}", "RefbiayaController@hapus");
 Route::post("/refbiaya", "RefbiayaController@store");
 
 //UNTUK AJAX
-Route::get("/getuser/{username}", "AjaxController@index");
+// Route::get("/getuser/{username}", "AjaxController@index"); gakkepake hehe
 
 // UNTUK PARKIR INFO
 Route::get("/info", "InfoController@index");

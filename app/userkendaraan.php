@@ -35,7 +35,7 @@ class UserKendaraan extends Model
     {
         return $this->belongsTo('App\RefMerk','merk','id_merk');
     }
-    public function RefJenisKendaraan2()
+    public function RefJenisKendaraan2() 
     {
         return $this->belongsTo('App\refbiaya','jenis_kendaraan','id_ref_kendaraan');
     }

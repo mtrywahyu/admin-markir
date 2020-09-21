@@ -9,7 +9,8 @@ class DatauserController extends Controller
 {
 
     public function datauser(){
-        $userbiodata = UserBiodata::all();
-        return view("datauser",["userbiodata"=>$userbiodata]);
+        $userbiodata = UserBiodata::all()->first();
+        // return $userbiodata;
+        return view("datauser",compact('userbiodata'));
     }
 }

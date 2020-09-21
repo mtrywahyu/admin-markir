@@ -109,3 +109,4 @@
     {{-- <script src="{{asset ('js/scripts/app/app-analytics-overview.1.1.0.min.js') }}"></script> --}}
   </body>
 </html>
+@yield('js')

@@ -6,7 +6,7 @@
            <!-- Page Header -->
            <div class="page-header row no-gutters py-4">
             <div class="col-12 col-sm-4 text-center text-sm-left mb-4 mb-sm-0">
-              <h3 class="page-title">Parkir Terkini</h3>
+              <h3 class="page-title">Parkir Terkini</h3> 
             </div>
             <div class="col-12 col-sm-4 d-flex align-items-center">
               <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
