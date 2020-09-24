@@ -38,6 +38,11 @@
                     @endforeach
                     
                   </select>
+                  <div class="col-sm-5 col-md-6 d-flex align-items-center">
+                    <div class="d-inline-flex mb-sm-0 mx-auto ml-sm-auto mr-sm-0" role="group" aria-label="Page actions">
+                      <a href="/laporan" class="btn btn-white active"> Data Keseluruhan </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
