@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 21 2020 19:14:31 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/jukir.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

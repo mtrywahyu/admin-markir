@@ -20,7 +20,7 @@
                     @else
                       <option value="{{$item->id}}" >{{$item->UserJukirBiodata->nama}} ({{ $item->id }})</option>
                     @endif
-                      
+                       
                     @endforeach
                   </select>
                 </div>
