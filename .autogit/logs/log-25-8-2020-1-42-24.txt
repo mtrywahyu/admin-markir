@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 25 2020 01:42:24 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parkirmasuk.blade.php
+
+
+Created files:
+* .autogit/logs/log-25-8-2020-1-12-17.txt
+* app/Http/Controllers/LaporanController.php
+* resources/views/laporan.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

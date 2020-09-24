@@ -6,7 +6,7 @@
       <div class="col-12 col-sm-6 text-center text-sm-left mb-4 mb-sm-0">
         <span class="text-uppercase page-subtitle">Informasi
         </span>
-        <h3 class="page-title">Insentif Setiap jukir</h3>
+        <h3 class="page-title">Data User</h3>
       </div>
     </div>
     <!-- End Page Header -->
@@ -21,24 +21,22 @@
           <thead class="bg-light">
             <tr>
               <th scope="col" class="border-0">No</th>
-              <th scope="col" class="border-0">Username</th>
               <th scope="col" class="border-0">Nama</th>
-              <th scope="col" class="border-0">No HandPhone</th>
-              <th scope="col" class="border-0">Email</th>
+              <th scope="col" class="border-0">Tanggal Masuk</th>
+              <th scope="col" class="border-0">Status</th>
+              <th scope="col" class="border-0">Biaya parkir</th>
             </tr>
-          </thead>
-          {{-- DELETE --}}
+        </thead>
           <tbody>
             @foreach($laporan as $d)
                 
             <tr>
-              <td>{{$d->id_biodata}}</td>
-              <td>{{$d->username}}</td>
-              <td>{{$d->nama}}</td>
-              <td>{{$d->no_hp}}</td>
-              <td>{{$d->email}}</td>
+              <td>{{$d->id_kendaraan}}</td>
+              <td>{{$d->jukir}}</td>
+              <td>{{$d->tgl_masuk}}</td>
+              <td>{{$d->stat_parkir}}</td>
+              <td>{{$d->biaya_parkir}}</td>
             </tr>
-            {{-- END DELETE --}}
             @endforeach
           </tbody>
         </table>

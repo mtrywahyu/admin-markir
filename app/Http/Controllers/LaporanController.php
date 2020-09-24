@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
-    public function index()
+    public function laporan()
     {
-        $userbiodata = userniodat::all();
+        $tb_parkir = parkirmasuk::all();
+        $userbiodata = UserBiodata::all() ->where"";
 
         return view("laporan",["laporan"=>$tb_parkir]);
+        // return $userbiodata;
     }
 }

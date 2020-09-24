@@ -90,3 +90,6 @@ Route::get("/datavalidasi", "DatavalidasiController@datavalidasi");
 // Data Kendaraan
 Route::get("/datakendaraan", "DatakendaraanController@datakendaraan");
 Route::get("/datakendaraan", "DatakendaraanController@index");
+
+// Data LAPORAN
+Route::get("/laporan", "LaporanController@laporan");
