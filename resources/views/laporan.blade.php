@@ -22,6 +22,7 @@
             <tr>
               <th scope="col" class="border-0">No</th>
               <th scope="col" class="border-0">Nama</th>
+              <th scope="col" class="border-0">Nama Jukir</th>
               <th scope="col" class="border-0">Tanggal Masuk</th>
               <th scope="col" class="border-0">Status</th>
               <th scope="col" class="border-0">Biaya parkir</th>
@@ -32,6 +33,7 @@
                 
             <tr>
               <td>{{$d->id_kendaraan}}</td>
+              <td>{{$d->UserKendaraan->UserAkun->UserBiodata->nama}}</td>
               <td>{{$d->jukir}}</td>
               <td>{{$d->tgl_masuk}}</td>
               <td>{{$d->stat_parkir}}</td>
