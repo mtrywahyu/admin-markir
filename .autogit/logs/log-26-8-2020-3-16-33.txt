@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 26 2020 03:16:33 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/HomeController.php
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-26-8-2020-2-46-26.txt
+
+
+Deleted files:
+
+
+Renamed files:
