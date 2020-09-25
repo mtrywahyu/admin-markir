@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 26 2020 02:46:26 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/laporan.blade.php
+* resources/views/parkirkeluar.blade.php
+
+
+Created files:
+* .autogit/logs/log-26-8-2020-2-16-20.txt
+
+
+Deleted files:
+
+
+Renamed files:

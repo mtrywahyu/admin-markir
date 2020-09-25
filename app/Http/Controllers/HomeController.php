@@ -39,6 +39,6 @@ class HomeController extends Controller
         
         // return $b;
         // return $a;
-    return view("home",compact('jukir','terkini','riwayat','user_akun','a','b','jukir2','jukir1'));
+    return view("home",compact('jukir','terkini','riwayat','user_akun','a','b','jukir1','jukir2'));
     }
 }

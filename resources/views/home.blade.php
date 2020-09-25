@@ -168,6 +168,14 @@
  {{-- END chart Parkir Terkini --}}
 
 <script>
+  var label = [];
+  @foreach($jukir2 as $item)
+    label.push('<?php echo $item; ?>');
+  @endforeach
+  var total = [];
+  @foreach($jukir1 as $item)
+    total.push('<?php echo $item; ?>');
+  @endforeach
  var ctx = document.getElementById('myChart2').getContext('2d');
  var chart = new Chart(ctx, {
      // The type of chart we want to create
@@ -175,13 +183,14 @@
  
      // The data for our dataset
      data: {
-         labels: ['Ter-Verifikasi', 'Belum Ter-Verifikasi'],
+         labels: label,
          datasets: [{
-             label: 'Data Juru Parkir',
+           label : ''
              data: [{{$jukir2}}, {{$jukir1}} ],
              backgroundColor: [
                 'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 99, 132, 0.2)'
+                'rgba(255, 99, 132, 0.2)',
+                data : total,
             ],
              
             borderColor: [
