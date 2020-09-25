@@ -17,7 +17,6 @@
   </head>
 
   <body class="h-100">
-    
       <div class="container-fluid icon-sidebar-nav">
         <div class="row">
           <!-- Main Sidebar -->
@@ -93,9 +92,11 @@
               </ul>
             </div>
           </aside>
-  <div class="container-fluid">
-      <div class="row">
-        <main class="main-content col-lg-12 col-md-12 col-sm-12 p-0">
+          <!-- End Main Sidebar -->
+          
+  {{-- <div class="container-fluid"> --}}
+    <main class="main-content col">
+      <div class="main-navbar sticky-top bg-white">
           <div class="main-navbar  bg-white">
             <div class="container p-0">
               <!-- Main Navbar -->
@@ -104,6 +105,7 @@
                 <ul class="navbar-nav border-left flex-row border-right ml-auto">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      <span>Hi admin</span>
                       <img class="user-avatar rounded-circle mr-2" src="{{ asset('images/avatars/profil.jpeg') }}" alt="User Avatar"> <span class="d-none d-md-inline-block">{{ Session::get('nama') }}</span>
                     </a>
 
@@ -123,25 +125,29 @@
                 </nav>
               </nav>
             </div> <!-- / .container -->
-      <!-- / .main-navbar -->
-           <div class="header-navbar collapse d-lg-flex p-0 bg-white border-top"> 
-          
-            <div class="container">
-              <div class="row">
-                <div class="col">
+        <!-- / .main-navbar -->
+            <div class="header-navbar collapse d-lg-flex p-0 bg-white border-top"> 
+            
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        @yield("content")
-        <footer class="main-footer d-flex p-2 px-5x bg-white border-top" id="footer">
+                @yield("content")
+                <footer class="main-footer d-flex p-2 px-5x bg-white border-top" id="footer">
 
-          <span class="copyright ml-auto my-auto mr-2">Made With <i class="fa fa-heart" aria-hidden="true" style="color:rgb(0, 162, 255);"></i> by
-              <a href="https://facebook.com/EkoPujianto1998">Nyervisga</a>
-          </footer>
+                  <span class="copyright ml-auto my-auto mr-2">Made With <i class="fa fa-heart" aria-hidden="true" style="color:rgb(0, 162, 255);"></i> by
+                      <a href="https://facebook.com/EkoPujianto1998">Nyervisga</a>
+                  </footer>
+          </div>
         </main>
+        
       </div>
     </div>
+  
+      
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
