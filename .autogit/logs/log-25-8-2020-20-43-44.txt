@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 25 2020 20:43:44 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parkirkeluar.blade.php
+
+
+Created files:
+* .autogit/logs/log-25-8-2020-3-12-47.txt
+
+
+Deleted files:
+
+
+Renamed files:
