@@ -8,6 +8,12 @@
         </span>
         <h3 class="page-title">Data User</h3>
       </div>
+      <div class="col-sm-5 col-md-6 d-flex align-items-center">
+        <div class="d-inline-flex mb-sm-0 mx-auto ml-sm-auto mr-sm-0" role="group" aria-label="Page actions">
+            
+          <a href="/laporan" class="btn btn-white active"><i class="material-icons">save</i> Download PDF </a>
+        </div>
+      </div>
     </div>
     <!-- End Page Header -->
 <!-- Transaction History Table -->
