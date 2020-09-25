@@ -69,18 +69,14 @@
                       <a href="/parkirkeluar" class="nav-link"><i class="material-icons">history</i> Riwayat Parkir</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link" data-toggle="dropdown"><i class="material-icons">&#xE2C7;</i>Info Akun</a>
+                      <a class="nav-link" data-toggle="dropdown"><i class="material-icons">&#xE2C7;</i>Master Data</a>
                       <div class="dropdown-menu dropdown-menu-small">
                         <a href="/userbiodata" class="dropdown-item">Users</a>
                         <a href="/jukir" class="dropdown-item">Jukir</a>
-                      </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link" data-toggle="dropdown"><i class="material-icons">&#xE2C7;</i>Info Kendaraan</a>
-                      <div class="dropdown-menu dropdown-menu-small">
                         <a href="/info" class="dropdown-item">Merk Kendaraan</a>
                         <a href="/refbiaya" class="dropdown-item">Info Biaya Kendaraan</a>
                       </div>
+                      
                     </li>
                   </ul>
                 </div>
