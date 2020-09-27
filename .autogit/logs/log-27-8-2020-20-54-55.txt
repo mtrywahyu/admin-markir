@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sun Sep 27 2020 20:54:55 GMT+0800 (Singapore Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/JukirController.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
