@@ -28,10 +28,10 @@ class JukirController extends Controller
     //save hasil verifikasi
     function simpan(Request $request){
         $jukir = UserJukir::where("username",$request->username)->first();
-        // return $jukir;
-        $jukir->status = "Y";
+        return $jukir;
+        $jukir->status = "aktif";
         $jukir->save();
-        return redirect("/jukir");
+        // return redirect("/jukir");
     }
 
     // hapus sementara
@@ -42,7 +42,7 @@ class JukirController extends Controller
         // return $jukir;
         $jukir->status = "non";
         $jukir->save();
-        return redirect("/jukir");
+        // return redirect("/jukir");
     }
 
     //lihat mapsnya jukir
